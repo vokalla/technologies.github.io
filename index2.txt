@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Pollution Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Air Pollution</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#statistics">Statistics</a></li>
+                <li><a href="#causes">Causes & Effects</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Understanding Air Pollution</h2>
+            <p>Learn about the impact of air pollution on health and the environment.</p>
+            <a href="#statistics" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="statistics">
+        <h2>Global Air Pollution Statistics</h2>
+        <p>Live data updates on pollution levels.</p>
+        <div id="data"></div>
+        <canvas id="pollutionChart"></canvas>
+    </section>
+
+    <section id="causes">
+        <h2>Causes & Effects</h2>
+        <div class="content">
+            <div class="cause">
+                <h3>Causes</h3>
+                <ul>
+                    <li>Industrial Emissions</li>
+                    <li>Vehicle Exhaust</li>
+                    <li>Deforestation</li>
+                </ul>
+            </div>
+            <div class="effect">
+                <h3>Effects</h3>
+                <ul>
+                    <li>Respiratory Diseases</li>
+                    <li>Climate Change</li>
+                    <li>Wildlife Destruction</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions">
+        <h2>Solutions</h2>
+        <p>How we can reduce air pollution:</p>
+        <ul>
+            <li>Use public transport</li>
+            <li>Plant more trees</li>
+            <li>Reduce industrial emissions</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Air Pollution Awareness</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('pollutionChart').getContext('2d');
+        const pollutionChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'Pollution Level',
+                    data: [90, 85, 88, 80, 75],
+                    borderColor: 'red',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

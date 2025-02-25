@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Future Technologies</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#innovations">Innovations</a></li>
+                <li><a href="#trends">Trends</a></li>
+                <li><a href="#ai">AI & Automation</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Explore the Future of Technology</h2>
+            <p>Discover groundbreaking advancements shaping the world.</p>
+            <a href="#innovations" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <section id="innovations" class="section">
+        <h2>Latest Innovations</h2>
+        <p>Stay updated with the newest tech breakthroughs.</p>
+        <div class="tech-gallery">
+            <div class="tech-item">Quantum Computing</div>
+            <div class="tech-item">5G Connectivity</div>
+            <div class="tech-item">Blockchain Evolution</div>
+        </div>
+    </section>
+
+    <section id="trends" class="section dark-section">
+        <h2>Emerging Tech Trends</h2>
+        <p>Key trends defining the next decade.</p>
+        <ul class="trend-list">
+            <li>Extended Reality (XR)</li>
+            <li>Edge Computing</li>
+            <li>Green Tech Solutions</li>
+        </ul>
+    </section>
+
+    <section id="ai" class="section light-section">
+        <h2>Artificial Intelligence & Automation</h2>
+        <p>How AI is revolutionizing industries.</p>
+        <canvas id="aiChart"></canvas>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-secondary">Send Message</button>
+        </form>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Future Technologies | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('aiChart').getContext('2d');
+        const aiChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['2020', '2022', '2024', '2026'],
+                datasets: [{
+                    label: 'AI Growth (%)',
+                    data: [30, 50, 70, 90],
+                    backgroundColor: 'blue'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
